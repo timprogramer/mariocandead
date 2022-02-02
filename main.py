@@ -52,9 +52,13 @@ while 1==1:
         speed_mario=3
     if kye <= 0 :
         speed_enemy = 2
+    raznica=int(raznica)
+    if raznica%5 != 0 :
+        print("HELLO")
+   # getxmario=wrap.sprite.get_x(mario)
+   # getymario=wrap.sprite.get_y(mario)
 
-    wrap.sprite.move(2,xfireballspeed,yfireballspeed)
-    
+    #wrap.sprite.move_at_angle_point(molot,getxmario,getymario,10)
 
 
 
