@@ -11,6 +11,8 @@ y_star=40
 
 speed_mario=3
 speed_enemy=2
+xfireballspeed=5
+yfireballspeed=2
 
 wrap.world.create_world(200,400,50,50)
 wrap.world.set_back_color(120, 82, 255)
@@ -51,6 +53,8 @@ while 1==1:
     if kye <= 0 :
         speed_enemy = 2
 
+    wrap.sprite.move(2,xfireballspeed,yfireballspeed)
+    
 
 
 
