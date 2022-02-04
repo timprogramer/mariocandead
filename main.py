@@ -9,10 +9,10 @@ y_enemy=40
 x_star=30
 y_star=40
 
-speed_mario=3
+speed_mario=15
 speed_enemy=2
 xfireballspeed=5
-yfireballspeed=2
+
 
 wrap.world.create_world(200,400,50,50)
 wrap.world.set_back_color(120, 82, 255)
@@ -41,7 +41,7 @@ while 1==1:
     kye=wrap.sprite.get_bottom(1)
 
     if kym >= 400:
-        speed_mario=-3
+        speed_mario=-9
     if kye >= 400:
         speed_enemy=-2
 
@@ -49,16 +49,23 @@ while 1==1:
     kye=wrap.sprite.get_top(1)
 
     if kym <= 0:
-        speed_mario=3
+        speed_mario=9
     if kye <= 0 :
         speed_enemy = 2
-    wrap.sprite.move(molot,speed_mario,speed_mario)
-    molotx=wrap.sprite.get_x(molot)
-    moloty=wrap.sprite.get_y(molot)
-    mariox=wrap.sprite.get_x(mario)
-    marioy = wrap.sprite.get_y(mario)
-    if molotx == molotx and moloty == marioy:
-        wrap.sprite.move(mario,0,0)
+
+    wrap.sprite.move(molot,xfireballspeed,xfireballspeed)
+
+    peresichenie=wrap.sprite.is_collide_sprite(molot,mario)
+
+    raznica=int(raznica)
+
+    if raznica%5 == 0:
+        molot = wrap.sprite.add("mario-enemies", x_star, y_star, "lava_ball")
+        wrap.sprite.move(molot, xfireballspeed, xfireballspeed)
+
+    if peresichenie == True:
+        wrap.sprite.move_to(mario,200,400)
+        exit()
 
 
 
