@@ -23,7 +23,7 @@ mawrioy = wrap.sprite.get_y(mario)
 
 blue=wrap.sprite.add("mario-enemies",x_enemy,y_enemy,"beetle_blue_dead")
 
-molot =wrap.sprite.add ("mario-enemies", x_star, y_star, "lava_ball")
+molot =wrap.sprite.add ("mario-enemies", x_enemy, y_enemy, "lava_ball")
 
 timesetstart=time.time()
 
@@ -72,6 +72,12 @@ while 1==1:
         molot = wrap.sprite.add("mario-enemies", enemyx,enemyy , "lava_ball")
         timesetstartt=time.time()
     wrap.sprite.move_at_angle_point(molot, mawriox, mawrioy, 10)
+    if minus >=3:
+        if peresichenie == False:
+            enemyx = wrap.sprite.get_x(blue)
+            enemyy = wrap.sprite.get_y(blue)
+            molot = wrap.sprite.add("mario-enemies", enemyx, enemyy, "lava_ball")
+            wrap.sprite.remove(molot)
 
     if peresichenie == True:
         print("hello")
