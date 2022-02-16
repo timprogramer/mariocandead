@@ -35,7 +35,7 @@ while 1==1:
     raznica=timesetend-timesetstart
     raznica=int(raznica)
     raznica=str(raznica)
-    wrap.sprite_text.set_text(tecst,raznica)
+    tekst565=wrap.sprite_text.set_text(tecst,raznica)
 
     wrap.sprite.move(0,0,speed_mario)
     wrap.sprite.move(1,0,speed_enemy)
