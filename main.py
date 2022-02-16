@@ -76,8 +76,10 @@ while 1==1:
         if peresichenie == False:
             enemyx = wrap.sprite.get_x(blue)
             enemyy = wrap.sprite.get_y(blue)
-            molot = wrap.sprite.add("mario-enemies", enemyx, enemyy, "lava_ball")
             wrap.sprite.remove(molot)
+            molot = wrap.sprite.add("mario-enemies", enemyx, enemyy, "lava_ball")
+
+
 
     if peresichenie == True:
         print("hello")
